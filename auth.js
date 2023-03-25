@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken")
 
-module.exports = async (req, res, next) => {
+module.exports = async (request, response, next) => {
     try {
-        const token = await  req.headers.authorization.split(" ")[1];
+        const token = await  request.headers.authorization.split(" ")[1];
 
         const decodedToken = await jwt.verify(token, "RANDOM-TOKEN");
 
