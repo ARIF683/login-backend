@@ -12,6 +12,6 @@ module.exports = async (request, response, next) => {
 
         next();
     } catch (error) {
-        res.send(400).json({error: new Error("Invalid request")})
+        response.status(400).json({error: new Error("Invalid request")})
     }
 }

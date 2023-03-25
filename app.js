@@ -51,7 +51,7 @@ app.post("/login", (req, res) => {
                     "RANDOM-TOKEN", {
                     expiresIn: "24h"
                 })
-                res.status(200).send({ message: "Login Successful", token })
+                res.status(200).send({ message: "Login Successful",email: user.email, token })
             })
             .catch((error) => {
                 res.status(400).send({ message: "Password doesn't match", error })
