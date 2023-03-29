@@ -8,7 +8,7 @@ const dbConnect = require("./db/dbConnect");
 const Auth = require("./auth");
 
 
-dbconnect();
+db.Connect();
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
